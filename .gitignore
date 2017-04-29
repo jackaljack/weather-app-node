@@ -1,2 +1,8 @@
+.vscode/
+
+.env
+
 node_modules/
+playground/
+
 .eslintrc.js
