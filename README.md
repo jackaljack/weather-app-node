@@ -1,5 +1,7 @@
 # Weather App Node.js
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jackdbd/weather-app-node.svg)](https://greenkeeper.io/)
+
 Simple weather app with [Node.js](https://nodejs.org/),
 [request](https://www.npmjs.com/package/request) and [axios](https://www.npmjs.com/package/axios).
 
