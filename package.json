@@ -1,26 +1,28 @@
 {
   "name": "weather-app-node",
   "version": "1.0.0",
-  "description": "A weather app built with Node.js",
-  "main": "app.js",
+  "description": "A weather app built with Node.js, yargs and got",
+  "license": "MIT",
+  "author": "Giacomo Debidda",
+  "main": "src/app.js",
+  "homepage": "https://github.com/jackdbd/weather-app-node",
+  "repository": "git@github.com:jackdbd/weather-app-node.git",
+  "engines": {
+    "node": ">=12"
+  },
   "scripts": {
-    "start": "node app.js --address ${address}",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --write '{,!(node_modules)/}**/*.js'",
+    "help": "node app.js --help",
+    "test": "true"
   },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb-base": "^11.1.3",
-    "eslint-plugin-import": "^2.2.0"
-  },
+  
   "dependencies": {
-    "axios": "^0.16.1",
-    "chalk": "^1.1.3",
     "cli-table": "^0.3.1",
-    "dotenv": "^4.0.0",
+    "got": "^11.7.0",
     "moment": "^2.18.1",
-    "request": "^2.81.0",
     "yargs": "^7.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.1.2"
   }
 }

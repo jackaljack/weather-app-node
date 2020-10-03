@@ -1,22 +1,36 @@
 # Weather App Node.js
 
-Simple weather app with [Node.js](https://nodejs.org/),
-[request](https://www.npmjs.com/package/request) and [axios](https://www.npmjs.com/package/axios).
+[![Build Status](https://travis-ci.org/jackdbd/weather-app-node.svg?branch=master)](https://travis-ci.com/jackdbd/weather-app-node)
 
-Geolocation powered by [Google Maps Geocoding](https://developers.google.com/maps/documentation/geocoding/start).
+A simple CLI that converts an address into geographic coordinates (see [What is geocoding?](https://developers.google.com/maps/documentation/geocoding/overview#Geocoding)) and spits out a weather forecast for that location.
+
+![Demo of the CLI app](https://github.com/jackdbd/weather-app-node/blob/master/demo.png "Demo of the CLI app.")
+
+Built with:
+
+- [Node.js](https://nodejs.org/)
+- [yargs](https://www.npmjs.com/package/request)
+- [got](https://github.com/sindresorhus/got)
+
+Geocoding powered by the [Geocoding API](https://developers.google.com/maps/documentation/geocoding/start).
 Weather forecasts powered by [Dark Sky](https://darksky.net/poweredby/).
 
-In order to get the data from Dark Sky you need an API key.
-You can get one [here](https://darksky.net/dev/).
-Then, store your API key in a `.env` file in your project root folder.
+## API keys
 
-You don't need an API key to get the data from the Google Maps Geocoding API.
+In order to use the Google Geocoding API you need an API key. See [here](https://developers.google.com/maps/documentation/geocoding/get-api-key) for details. For a free alternative see [Geocodeapi](https://geocodeapi.io/).
 
+You will need another key to use the Dark Sky API. You can get one [here](https://darksky.net/dev/).
 
-Example of use:
+I store my API keys in a `.envrc` file that I load with [direnv](https://github.com/direnv/direnv).
 
-- `yarn run start 'New York'`
-- `yarn run start London`
-- `yarn run start 90210`
+## How to use it
 
-*Note*: if you don't use `yarn`, you can replace it with `npm`.
+here are a few examples:
+
+```shell
+node src/app.js --address London
+node src/app.js -a 'New York'
+node src/app.js -a 90210
+node src/app.js -a 'Via dei Fori Imperiali'
+node src/app.js -a 'Sensoji Temple'
+```
